@@ -6,8 +6,8 @@ Contains Jupyter notebook workflows which access climate data from various [OSDF
 
 ## Example Workflows
 1) Accessing CESM2 LENS data from the AWS opendata origin and the NCAR data origin and
-  a) Bias-correct surface temperature using ERA5 reanalysis
-  b) Compute surface ocean heat content
+a) Bias-correct surface temperature using ERA5 reanalysis
+b) Compute surface ocean heat content
 2) Accessing NOAA SONAR data from the AWS origin to plot echograms
  
 
