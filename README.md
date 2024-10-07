@@ -5,9 +5,9 @@ Contains Jupyter notebook workflows which access climate data from various [OSDF
 
 
 ## Example Workflows
-1) Accessing CESM2 LENS data from the AWS opendata origin and the NCAR data origin and
-a) Bias-correct surface temperature using ERA5 reanalysis. The notebook can be found [here](jupyter_notebooks/cesm_bias.ipynb)
-b) Compute surface ocean heat content. The notebook can be found [here](jupyter_notebooks/cesm_oceanheat.ipynb)
-2) Accessing NOAA SONAR data from the AWS origin to plot echograms. [Here](jupyter_notebooks/sonar_ai.ipynb) is the notebook.
+1) Access ESM2 LENS data from the AWS opendata origin and the NCAR data origin and
+   - a) [Bias-correct](jupyter_notebooks/cesm_bias.ipynb) surface temperature using ERA5 reanalysis. 
+   - b) [Compute](jupyter_notebooks/cesm_oceanheat.ipynb) surface ocean heat content. 
+2) Access NOAA SONAR data from the AWS origin to [plot echograms](jupyter_notebooks/sonar_ai.ipynb) 
  
 
