@@ -13,6 +13,6 @@ Contains Jupyter notebook workflows which access climate data from various [OSDF
 3) Run temperature bias-correction workflow on
    - a) [Stampede3](jupyter_notebooks/cesm_osdf_stampede3.ipynb)
    - b) [NCAR's Casper](jupyter_notebooks/cesm_posix_bias.ipynb)
-4) [Compute](jupyter_notebooks/geocat_climatology.ipynb) climatological average of daily temperature data using [geocat-comp](https://geocat-comp.readthedocs.io/en/stable/examples/climatology_average.html) package
+4) [Compute](jupyter_notebooks/geocat_climatology.ipynb) climatological average of daily temperature data using the [geocat-comp](https://geocat-comp.readthedocs.io/en/stable/examples/climatology_average.html) package
  
 
