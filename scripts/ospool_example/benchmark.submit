@@ -1,0 +1,17 @@
+universe    = vanilla
+
++SingularityImage = "/cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-ubuntu-20.04:latest"
+
+executable  = run_py.sh
+
+transfer_input_files = benchmark.py
+
+log         = job.log
+output      = job.out
+error       = job.error
+
+request_cpus    = 1 
+request_memory  = 2GB
+request_disk    = 2GB
+
+queue 1
