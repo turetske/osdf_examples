@@ -14,12 +14,14 @@ def convert_to_speed(times,size):
 
 def read_https(url, repeat=10):
     results = []
+    print(url)
     for i in range(repeat):
         start = time.time()
         fh = fsspec.open(url)
         test = fh.open().read()
         end = time.time()
         results.append(end-start)
+        print(i)
 
     return results
 
@@ -31,9 +33,9 @@ else:
     https_url = 'https://data.rda.ucar.edu/d083002/grib2/2016/2016.01/fnl_20160102_00_00.grib2' # ~ 17 MB
     https_url_200 = 'https://data.rda.ucar.edu/d131003/anl/anl_mean_1836_CAPE_sfc.nc'
     https_url_500 = 'https://data.rda.ucar.edu/d084001/2024/20241109/gfs.0p25.2024110900.f000.grib2' # ~ 500 MB
-    osdf_url = 'osdf:///ncar/rda/d083002/grib2/2016/2016.01/fnl_20160102_00_00.grib2'
-    osdf_url_200 = 'osdf:///ncar/rda/d131003/anl/anl_mean_1836_CAPE_sfc.nc'
-    osdf_url_500 =  'osdf:///ncar/rda/d084001/2024/20241109/gfs.0p25.2024110900.f000.grib2'
+    osdf_url = https_url.replace('https://data.rda.ucar.edu/', 'osdf:///ncar/rda/')
+    osdf_url_200 = https_url_200.replace('https://data.rda.ucar.edu/', 'osdf:///ncar/rda/')
+    osdf_url_500 = https_url_500.replace('https://data.rda.ucar.edu/', 'osdf:///ncar/rda/')
 
 
 print('http tests')
@@ -44,7 +46,7 @@ http_benchmark_500 = convert_to_speed(read_https(https_url_500), 500)
 print('osdf tests')
 osdf_benchmark_20  = convert_to_speed(read_https(osdf_url), 17)
 osdf_benchmark_200 = convert_to_speed(read_https(osdf_url_200), 260)
-osdf_benchmark_500 = convert_to_speed(read_https(osdf_url), 500)
+osdf_benchmark_500 = convert_to_speed(read_https(osdf_url_500), 500)
 
 
 reps = 11
