@@ -1,17 +1,17 @@
 universe    = vanilla
 
-+SingularityImage = "/cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-ubuntu-20.04:latest"
++SingularityImage = "/cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-xenon:el9"
 
 executable  = run_py.sh
 
-transfer_input_files = benchmark.py
+transfer_input_files = benchmark.py,requirements.txt,my_env.tar.gz
 
-log         = job.log
-output      = job.out
-error       = job.error
+log         = job$(Cluster).$(Process).log
+output      = job$(Cluster).$(Process).out
+error       = job$(Cluster).$(Process).error
 
 request_cpus    = 1 
-request_memory  = 2GB
+request_memory  = 4GB
 request_disk    = 2GB
 
 queue 1
