@@ -41,7 +41,7 @@ results = {hostname:{
     "200MB":{},
     "500MB":{}}
     }
-https_url = 'https://data.rda.ucar.edu/d083002/grib2/2016/2016.01/fnl_20160102_00_00.grib2' # ~ 17 MB
+https_url = 'https://data.rda.ucar.edu/d083002/grib2/2016/2016.01/fnl_20160101_00_00.grib2' # ~ 17 MB
 https_url_200 = 'https://data.rda.ucar.edu/d131003/anl/anl_mean_1836_CAPE_sfc.nc' # ~ 200 MB
 https_url_500 = 'https://data.rda.ucar.edu/d084001/2024/20241109/gfs.0p25.2024110900.f000.grib2' # ~ 500 MB
 osdf_url = https_url.replace('https://data.rda.ucar.edu/', 'osdf:///ncar/rda/')
@@ -68,9 +68,10 @@ osdf_benchmark_500 = read_https(osdf_url_500)
 
 reps = 11
 osdf_500_first = []
-osdf_url_500 = osdf_url_500.replace('2024', str(random.randint(2016,2023))
-osdf_url_500 = osdf_url_500.replace('09', str(random.randint(12,28))
-for i in range(1,reps):
+osdf_url_500 = osdf_url_500.replace('2024', str(random.randint(2016,2023)))
+osdf_url_500 = osdf_url_500.replace('11', str(random.randint(10,12)))
+osdf_url_500 = osdf_url_500.replace('09', str(random.randint(12,28)))
+for i in range(random.randint(1,15),reps):
     new_url = osdf_url_500.replace('f000','f'+f'{i*3}'.zfill(3))
     print(new_url)
     start = time.time()
@@ -103,10 +104,11 @@ for i in range(rand_year,rand_year+reps):
         print(f'failed run {i-1836}')
 
 
-reps = 12
+reps = 11
 osdf_20_first = []
 for i in range(2,reps):
     new_url = osdf_url.replace('20160101','201601'+f'{i}'.zfill(2))
+    new_url = new_url.replace('201601','2016'+str(random.randint(1,12)).zfill(2))
     new_url = new_url.replace('2016',str(random.randint(2016,2023)))
     print(new_url)
     start = time.time()
