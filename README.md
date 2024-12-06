@@ -16,6 +16,6 @@ Contains Jupyter notebook workflows which access climate data from various [OSDF
    - a) [Stampede3](notebooks/cesm_osdf_stampede3.ipynb)
    - b) [NCAR's Casper](notebooks/cesm_posix_bias.ipynb)
 6) [Compute](notebooks/geocat_climatology.ipynb) climatological average of daily temperature data using the [geocat-comp](https://geocat-comp.readthedocs.io/en/stable/examples/climatology_average.html) package
-7) Access CMIP6 data from (27 Global Climate Models) from AWS zarr store and plot the evolution of [Global Mean Surface Temperature](notebooks/cmip6_aws_zarr.ipynb) with time.
+7) Access CMIP6 zarr data from (27 Global Climate Models) AWS and plot the evolution of [Global Mean Surface Temperature](notebooks/cmip6_aws_zarr.ipynb) with time.
  
 
