@@ -26,7 +26,6 @@ def read_https(url, repeat=10):
         test = fh.open().read()
         end = time.time()
         results.append(end-start)
-        print(i)
 
     return results
 
@@ -49,7 +48,7 @@ osdf_url_200 = https_url_200.replace('https://data.rda.ucar.edu/', 'osdf:///ncar
 osdf_url_500 = https_url_500.replace('https://data.rda.ucar.edu/', 'osdf:///ncar/rda/')
 
 
-print('http tests')
+print('** http tests')
 #http_benchmark_20  = convert_to_speed(read_https(https_url), 17)
 #http_benchmark_200 = convert_to_speed(read_https(https_url_200), 260)
 #http_benchmark_500 = convert_to_speed(read_https(https_url_500), 500)
@@ -57,7 +56,7 @@ http_benchmark_20  = read_https(https_url)
 http_benchmark_200 = read_https(https_url_200)
 http_benchmark_500 = read_https(https_url_500)
 
-print('osdf tests')
+print('** osdf tests')
 #osdf_benchmark_20  = convert_to_speed(read_https(osdf_url), 17)
 #osdf_benchmark_200 = convert_to_speed(read_https(osdf_url_200), 260)
 #osdf_benchmark_500 = convert_to_speed(read_https(osdf_url_500), 500)
@@ -65,7 +64,7 @@ osdf_benchmark_20  = read_https(osdf_url)
 osdf_benchmark_200 = read_https(osdf_url_200)
 osdf_benchmark_500 = read_https(osdf_url_500)
 
-
+print('** osdf first pull tests')
 reps = 11
 osdf_500_first = []
 osdf_url_500 = osdf_url_500.replace('2024', str(random.randint(2016,2023)))
@@ -101,14 +100,16 @@ for i in range(rand_year,rand_year+reps):
         osdf_200_first.append(end-start)
         print(end-start)
     except:
-        print(f'failed run {i-1836}')
+        print(f'failed run {i}')
 
 
 reps = 11
 osdf_20_first = []
 for i in range(2,reps):
     new_url = osdf_url.replace('20160101','201601'+f'{i}'.zfill(2))
-    new_url = new_url.replace('201601','2016'+str(random.randint(1,12)).zfill(2))
+    month = str(random.randint(1,12)).zfill(2)
+    new_url = new_url.replace('201601','2016'+month)
+    new_url = new_url.replace('2016.01','2016.'+month)
     new_url = new_url.replace('2016',str(random.randint(2016,2023)))
     print(new_url)
     start = time.time()

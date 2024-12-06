@@ -15,6 +15,12 @@ def swap_resource_name(name):
         return 'GPGRID'
     if name == 'Wisconsin':
         return 'CHTC'
+    if name == 'Pervasiv':
+        return 'Jetstream2-IU'
+    if name == 'UChicago':
+        return 'GC1'
+    if name == 'Ne':
+        return 'CMS Glidein Systems'
     return name
 files = glob.glob('out*.json')
 
@@ -35,7 +41,7 @@ for _file in files:
         results[resource_name] = benchmarks[resource_name]
         results[resource_name]['Site'] = location_info
     else:
-        for i,j in results[resource_name].items():
+        for i,j in benchmarks[resource_name].items():
             if i == 'Site': 
                 continue
             for k,l in j.items():
