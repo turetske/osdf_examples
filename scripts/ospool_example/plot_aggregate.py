@@ -20,8 +20,8 @@ def calculate_baseline_latency(dist):
 
 benchmarks = json.load(open('aggregate.json')) 
 
+# Make one figure for each benchmark entry
 for name,values in benchmarks.items():
-
     distance = 'unknown'
     baseline_latency = 'unknown'
     try:
@@ -62,9 +62,10 @@ for name,values in benchmarks.items():
     ax.add_feature(cfeature.LAND, facecolor='#FFE9B5')
     state_borders = cfeature.NaturalEarthFeature(category='cultural', name='admin_1_states_provinces_lakes', scale='50m', facecolor='#FFE9B5')
     ax.add_feature(state_borders, edgecolor='black') 
+    nwsc_lat,nwsc_lon = (41.127, -104.894)
     try:
-        ax.plot([-104.894,float(values['Site']['Longitude'])],[41.127,values['Site']['Latitude']],linewidth=4, transform=ccrs.PlateCarree())
+        ax.plot([nwsc_lon,float(values['Site']['Longitude'])],[nwsc_lat,values['Site']['Latitude']],linewidth=4, transform=ccrs.PlateCarree())
     except:
-        ax.plot([-104.894,-104],[41.127,41],linewidth=4, transform=ccrs.PlateCarree())
+        ax.plot([nwsc_lon,-104],[nwsc_lat,41],linewidth=4, transform=ccrs.PlateCarree())
 
     fig.savefig(f'{name}.png')

@@ -1,12 +1,13 @@
 import json
 import glob
-import pdb
 import geopy
 
-
-
 def swap_resource_name(name):
-    """change the resource name of a few special cases"""
+    """Change the resource name of a few special cases
+
+    name (str): Given 'name' from OSPool node information
+
+    """
     if name == 'Colorado':
         return 'UColorado_HEP'
     if name == 'Lehig':
@@ -22,10 +23,10 @@ def swap_resource_name(name):
     if name == 'Ne':
         return 'CMS Glidein Systems'
     return name
+
 files = glob.glob('out*.json')
 
-
-
+# Used for geolocation
 rgs = json.load(open('resource_group_summary'))
 
 results = {}
