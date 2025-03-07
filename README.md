@@ -12,7 +12,7 @@ Contains Jupyter notebook workflows which access climate data from various [OSDF
    - d) [Compute](notebooks/cesm_gmst_ncar.ipynb) GMST anomaly and plot.
 2) Access NOAA SONAR data from the AWS origin to [plot echograms](notebooks/ndc_workflows/sonar_ai.ipynb)
 3) Access NA-CORDEX data from NCAR's Research Data Archive and make some diagnostic [plots](notebooks/na_cordex.ipynb)
-4) Benchmark data access speeds from the NCAR data [origin](notebooks/ndc_workflows/ncar_benchmark.ipynb) using the DART reanalysis dataset
+4) Benchmark data access speeds from the NCAR data [origin](notebooks/ndc_workflows/ncar_benchmark.ipynb) using the DART reanalysis dataset and make [diagnostic plots](notebooks/dart-cam6.ipynb)
 5) Benchmark data access speeds from the NCAR's data [origin](notebooks/ndc_workflows/ncar_benchmark_ap40.ipynb), when the data is accessed from the OSPool's access point AP40
 6) Run temperature bias-correction workflow on
    - a) [Stampede3](notebooks/cesm_osdf_stampede3.ipynb)
