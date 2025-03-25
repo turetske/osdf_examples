@@ -18,7 +18,7 @@ Contains Jupyter notebook workflows which access climate data from various [OSDF
    - a) [Stampede3](notebooks/cesm_osdf_stampede3.ipynb)
    - b) [NCAR's Casper](notebooks/cesm_posix_bias.ipynb)
 7) [Compute](notebooks/geocat_climatology.ipynb) climatological average of daily temperature data using the [geocat-comp](https://geocat-comp.readthedocs.io/en/stable/examples/climatology_average.html) package
-8) Access CMIP6 zarr data from (27 Global Climate Models) AWS and plot the evolution of [Global Mean Surface Temperature](notebooks/cmip6_aws_zarr.ipynb) with time.
+8) Access CMIP6 zarr data from (27 Global Climate Models) AWS and plot the evolution of [Global Mean Surface Temperature](notebooks/cmip6_aws_zarr.ipynb) with time. The model projections were also compared with the [HadCRUT5](https://www.metoffice.gov.uk/hadobs/hadcrut5/) observational dataset.
 
 ### Machine learning workflows
 1) Use logistic regression to [predict](notebooks/ml_workflows/nino3.4_index.ipynb) Nino3.4 indices in advance. The training data are Sea Surface Temperature values and observed nino indices hosted on NCAR's RDA.
