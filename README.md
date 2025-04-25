@@ -11,7 +11,7 @@ Contains Jupyter notebook workflows which access climate data from various [OSDF
    - c) [Compute](notebooks/cesm_oceanheat.ipynb) surface ocean heat content.
    - d) [Compute](notebooks/cesm_gmst_ncar.ipynb) GMST anomaly and plot.
 2) Access NOAA SONAR data from the AWS origin to [plot echograms](notebooks/ndc_workflows/sonar_ai.ipynb)
-3) Acesss Sentinel-2 satellite data from AWS to [compute spectral change][notebooks/ndc_workflows/pycogss_spectral_change.ipynb)
+3) Acesss Sentinel-2 satellite data from AWS to [compute spectral change](notebooks/ndc_workflows/pycogss_spectral_change.ipynb)
 4) Access NA-CORDEX data from NCAR's Research Data Archive (RDA) and make some diagnostic [plots](notebooks/na_cordex.ipynb)
 5) Access CONUS 404 data from NCAR's RDA and make some diagnostic [plots](notebooks/conus404.ipynb)
 6) Benchmark data access speeds from the NCAR data [origin](notebooks/ndc_workflows/ncar_benchmark.ipynb) using the DART reanalysis dataset and make [diagnostic plots](notebooks/dart-cam6.ipynb)
