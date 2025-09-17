@@ -12,9 +12,9 @@ Contains Jupyter notebook workflows which access climate data from various [OSDF
    - d) [Compute](notebooks/cesm_gmst_ncar.ipynb) GMST anomaly and plot.
 2) Access NOAA SONAR data from the AWS origin to [plot echograms](notebooks/ndc_workflows/sonar_ai.ipynb)
 3) Acesss Sentinel-2 satellite data from AWS to [compute spectral change](notebooks/ndc_workflows/pycogss_spectral_change.ipynb)
-4) Access NA-CORDEX data from NCAR's Research Data Archive (RDA) and make some diagnostic [plots](notebooks/na_cordex.ipynb)
-5) Access CONUS 404 data from NCAR's RDA and make some diagnostic [plots](notebooks/conus404.ipynb)
-6) Access data from the `SAAG' dataset hosted on NCAR's RDA and make diagnostic [plots](notebooks/saag.ipynb)
+4) Access NA-CORDEX data from NCAR's Geoscience Data Exchange (GDEX) and make some diagnostic [plots](notebooks/na_cordex.ipynb)
+5) Access CONUS 404 data from NCAR's GDEX and make some diagnostic [plots](notebooks/conus404.ipynb)
+6) Access data from the `SAAG' dataset hosted on NCAR's GDEX and make diagnostic [plots](notebooks/saag.ipynb)
 7) Benchmark data access speeds from the NCAR data [origin](notebooks/ndc_workflows/ncar_benchmark.ipynb) using the DART reanalysis dataset and make [diagnostic plots](notebooks/dart-cam6.ipynb)
 8) Benchmark data access speeds from the NCAR's data [origin](notebooks/ndc_workflows/ncar_benchmark_ap40.ipynb), when the data is accessed from the OSPool's access point AP40
 9) Run temperature bias-correction workflow on
@@ -26,6 +26,6 @@ Contains Jupyter notebook workflows which access climate data from various [OSDF
     - b) compute [Equilibrium Climate Sensitivity](notebooks/cmip6_ecs.ipynb).
 
 ### Machine learning workflows
-1) Use logistic regression to [predict](notebooks/ml_workflows/nino3.4_index.ipynb) Nino3.4 indices in advance. The training data are Sea Surface Temperature values and observed nino indices hosted on NCAR's RDA.
+1) Use logistic regression to [predict](notebooks/ml_workflows/nino3.4_index.ipynb) Nino3.4 indices in advance. The training data are Sea Surface Temperature values and observed nino indices hosted on NCAR's GDEX.
  
 
