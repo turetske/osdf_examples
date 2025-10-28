@@ -27,5 +27,16 @@ Contains Jupyter notebook workflows which access climate data from various [OSDF
 
 ### Machine learning workflows
 1) Use logistic regression to [predict](notebooks/ml_workflows/nino3.4_index.ipynb) Nino3.4 indices in advance. The training data are Sea Surface Temperature values and observed nino indices hosted on NCAR's GDEX.
+
+## How to contribute 
+We welcome contributions from anyone who has an NCAR HPC account (Casper/Derecho access) and uses GDEX data! Please follow these steps:
+1. Fork the repository
+2. Create a feature branch (git checkout -b example/my-amazing-example)
+3. Add your notebook/ workflow
+4. Submit a pull request with a brief explanation of the changes
+
+## Support
+Issues: Please report bugs and feature requests via GitHub Issues
+
  
 
