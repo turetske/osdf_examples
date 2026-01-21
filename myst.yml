@@ -36,6 +36,7 @@ project:
         - file: notebooks/saag.ipynb
         - file: notebooks/simple_aws_example.ipynb
         - file: notebooks/uxarray_test.ipynb
+        - file: notebooks/era5_precip.ipynb
         - title: Ml Workflows
           children:
             - file: notebooks/ml_workflows/nino3.4_index.ipynb
