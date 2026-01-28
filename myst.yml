@@ -28,7 +28,7 @@ project:
             - file: notebooks/cesm_oceanheat.ipynb
             - file: notebooks/conus404.ipynb
             - file: notebooks/dart-cam6.ipynb
-            - file: notebooks/era5_test.ipynb
+            - file: notebooks/jra_3q.ipynb
             - file: notebooks/eol_era5.ipynb
             - file: notebooks/geocat_climatology.ipynb
             - file: notebooks/na_cordex.ipynb
