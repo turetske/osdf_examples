@@ -20,7 +20,7 @@ project:
     - file: docs/introduction.md
     - file: README.md
 
-    - title: NCAR GDEX workflows
+    - title: NCAR HPC workflows
       children:
         - file: docs/gdex_workflows.md
         - title: NCAR data origin
